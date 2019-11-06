@@ -19,7 +19,7 @@ import time
 from selenium import webdriver
 
 # Create an instance of Firefox WebDriver
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 # Maximize the browser window
 driver.maximize_window()
 driver.get("http://qxf2.com/selenium-tutorial-main")
@@ -29,6 +29,10 @@ checkbox = driver.find_element_by_xpath("//input[@type='checkbox']")
 checkbox.click()
 
 # Pause the script for 3 sec so you can confirm the check box was selected
+time.sleep(3)
+
+# KEY POINT: The checked box will unchecked after 3 sec
+checkbox.click()
 time.sleep(3)
 
 # Close the browser window
