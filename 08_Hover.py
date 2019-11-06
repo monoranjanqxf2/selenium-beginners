@@ -24,7 +24,7 @@ from selenium import webdriver
 from selenium.webdriver.common.action_chains import ActionChains 
 
 # Create an instance of Firefox WebDriver
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 # Maximize the browser window
 driver.maximize_window()
 # Navigate to Qxf2 Tutorial page
