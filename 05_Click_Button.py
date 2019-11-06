@@ -23,14 +23,16 @@ driver = webdriver.Chrome()
 # Maximize the browser window
 driver.maximize_window()
 # Navigate to Qxf2 Tutorial page
-driver.get("http://qxf2.com/selenium-tutorial-main")
+driver.get("https://accounts.google.com/signin/v2/identifier?continue=https%3A%2F%2Fmail.google.com%2Fmail%2F&service=mail&sacu=1&rip=1&flowName=GlifWebSignIn&flowEntry=ServiceLogin")
 
-# KEY POINT: Locate the button and click on it 
-button  = driver.find_element_by_xpath("//button[text()='Click me!']") 
+# KEY POINT: Locate the button and click on it
+name = driver.find_element_by_xpath("//input[@name='identifier']")
+name.send_keys("Enter your email id")
+button  = driver.find_element_by_xpath("//div[@id='identifierNext']") 
 button.click()
 
 # Pause the script to wait for page elements to load
-time.sleep(3)
+time.sleep(5)
 
 # Close the browser
 driver.close()
