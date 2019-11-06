@@ -19,7 +19,7 @@ import time
 from selenium import webdriver
 
 # Create an instance of Firefox WebDriver
-driver = webdriver.Firefox()
+driver = webdriver.Chrome()
 # Maximize the browser window
 driver.maximize_window()
 
@@ -35,7 +35,7 @@ time.sleep(1)
 # KEY POINT: Locate a particular option and click on it
 driver.find_element_by_xpath("//a[text()='Male']").click()
 # Future tutorials cover explicit, implicit and ajax waits
-time.sleep(3)
+time.sleep(1)
 
 # Close the browser window
 driver.close()
