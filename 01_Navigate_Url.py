@@ -18,16 +18,16 @@ SCOPE:
 from selenium import webdriver
 
 # Create an instance of Firefox WebDriver
-browser = webdriver.Firefox()
+browser = webdriver.Chrome()
 
 # KEY POINT: The driver.get method will navigate to a page given by the URL
-browser.get('http://qxf2.com/selenium-tutorial-main')
+browser.get('http://www.amazon.in')
 
 # Check if the title of the page is proper
-if(browser.title=="Qxf2 Services: Selenium training main"):
-    print ("Success: Qxf2 Tutorial page launched successfully")
+if(browser.title=="Online Shopping site in India: Shop Online for Mobiles, Books, Watches, Shoes and More - Amazon.in"):
+    print ("Success: Amazon Home page launched successfully")
 else:
-    print ("Failed: Qxf2 Tutorial page Title is incorrect") 
+    print ("Failed: Amazon Home page Title is incorrect") 
 
 # Quit the browser window
 browser.quit() 
